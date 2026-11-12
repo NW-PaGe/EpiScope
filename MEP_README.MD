@@ -13,7 +13,7 @@ Add your `config.csv` file to the head directory of this repository
 
 This will download all Morganella_morganii released on NCBI on on or after 2016-11-02 and will exclude all a-typical genomes that have USA as a substring as geo-location. Atypical genomes should exlude genomes that are misattributed to your taxa, but you may with she remove this flag if you don't see closely related genomes to your reference (production) seqs. 582 is the taxon ID for Morganella_morganii as can be see on [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/datasets/taxonomy/)
 ```bash
-bash get-taxon-genomes.sh 582  --include genome  --mag exclude  --assembly-version latest  --released-after 2016-11-02  --exclude-atypical --geo-location "USA"
+get-taxon-genomes.sh 582  --include genome  --mag exclude  --assembly-version latest  --released-after 2016-11-02  --exclude-atypical --geo-location "USA"
 ```
 
 This will check to see how many genomes pass this filter and see if I have enough local memory to complete the download. The following Shigella query will not begin downloading seqs because it will be too large for my local memory to handle - it will recommend you aler your query OR repeate the analysis in a location with larger memory.
