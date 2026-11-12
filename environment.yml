@@ -1,0 +1,22 @@
+name: episcope
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.11
+  # Python scripts
+  - pandas        # long_to_matrix.py
+  - biopython     # get_sra.py (Entrez)
+  # Genomics tools
+  - mash          # make_ref_db.sh, get_mash_dist.sh (--tool mash, the default)
+  - sourmash-minimal                # --tool sourmash
+  - sourmash_plugin_branchwater     # --tool sourmash: provides `sourmash scripts ...`
+  - ncbi-datasets-cli   # provides `datasets` and `dataformat` for get-taxon-genomes.sh
+  # Shell utilities used by the scripts
+  - jq
+  - unzip
+  - gawk
+  - coreutils     # split, df, sort, etc. (GNU versions; needed on macOS for df -B1)
+  - findutils     # find, xargs
+  - util-linux    # flock (Linux only; remove on macOS)
