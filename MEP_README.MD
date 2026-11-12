@@ -34,7 +34,7 @@ populate_bb_references.sh --config config.csv --bbv2 --species Morganella_morgan
 episcope.sh --outdir results --tool sourmash --threads 8 --email you@example.org --db Morganella_morganii --illumina --matrix
 ```
 
-Also useful for if your production seqs have been uploaded you can provide a tsv with one entry per line of any Genbank or SRA ID to exclude from the analysis of finding the closest genomes to your reference dataset with the `--exclude exclude.txt` arg
+Also useful for if your production seqs have been uploaded you can provide a tsv with one entry per line of any Genbank or SRA ID to exclude from the analysis of finding the closest genomes to your reference dataset with the `--exclude exclude.txt` arg. Include the arg `--max-candidates <#>` to limit how many seqs are checked by ranking for SRA.
 
 **4. Examine Output files**
 - `results/bigbacter_queue.<bigbacter_db>.closest_to_SRA_YYYYMMDD.csv`: BigBacter manifest
